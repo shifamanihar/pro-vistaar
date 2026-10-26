@@ -1,0 +1,1041 @@
+
+/* =========================================
+   PROVISTAAR — QUOTE PAGE
+   Responsive: Desktop, Tablet & Mobile
+========================================= */
+
+.quote-page {
+  --navy: #080f55;
+  --navy-light: #17206f;
+  --pink: #ec1595;
+  --pink-dark: #d90c82;
+  --blue: #71bcf9;
+  --soft-blue: #edf8ff;
+  --soft-pink: #fff1fa;
+  --text: #111b62;
+  --muted: #68739c;
+  --border: #dfe8f5;
+  --white: #ffffff;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 64px 20px 90px;
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at 0% 10%,
+      rgba(113, 188, 249, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 30%,
+      rgba(236, 21, 149, 0.08),
+      transparent 25%
+    ),
+    linear-gradient(180deg, #f8fcff, #ffffff 55%, #fffafd);
+  font-family: inherit;
+  overflow-x: clip;
+}
+
+.quote-page *,
+.quote-success-page * {
+  box-sizing: border-box;
+}
+
+.quote-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.quote-section-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.quote-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--pink);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+.quote-section-heading h1,
+.quote-success-card h1 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.quote-section-heading h1 span,
+.quote-success-card h1 span {
+  color: var(--pink);
+}
+
+.quote-section-heading > p {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.quote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.85fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.quote-form,
+.quote-summary {
+  min-width: 0;
+  border: 1px solid rgba(223, 232, 245, 0.95);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 15px 50px rgba(8, 15, 85, 0.06);
+}
+
+.quote-form {
+  padding: clamp(20px, 3.2vw, 38px);
+}
+
+.quote-summary {
+  position: sticky;
+  top: 24px;
+  padding: 28px;
+}
+
+/* =========================================
+   FORM SECTIONS
+========================================= */
+
+.quote-form-section {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.quote-form-section:last-of-type {
+  margin-bottom: 24px;
+}
+
+.quote-form-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.quote-step-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #fce8f5, #e9f5ff);
+  color: var(--pink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.quote-form-heading h2 {
+  margin: 1px 0 6px;
+  color: var(--navy);
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.quote-form-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.quote-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px 18px;
+}
+
+.quote-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.quote-field label {
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.quote-field label span {
+  color: var(--pink);
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 49px;
+  padding: 13px 14px;
+  border: 1px solid #dce5f3;
+  border-radius: 11px;
+  outline: none;
+  background: #fbfdff;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.quote-field input::placeholder,
+.quote-field textarea::placeholder {
+  color: #9aa4bd;
+  opacity: 1;
+}
+
+.quote-field select {
+  cursor: pointer;
+}
+
+.quote-field textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+  border-color: var(--pink);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(236, 21, 149, 0.09);
+}
+
+.quote-field input[type="file"] {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.quote-file-name {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.quote-message-field {
+  margin-top: 22px;
+}
+
+/* =========================================
+   DESIGN STYLE CARDS
+========================================= */
+
+.quote-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.style-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  min-width: 0;
+  min-height: 100px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #ffffff;
+  color: var(--navy);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.style-card:hover {
+  transform: translateY(-2px);
+  border-color: #f0a3d2;
+  box-shadow: 0 8px 22px rgba(8, 15, 85, 0.05);
+}
+
+.style-card.active {
+  border-color: var(--pink);
+  background: var(--soft-pink);
+  box-shadow: 0 0 0 2px rgba(236, 21, 149, 0.06);
+}
+
+.style-card-check {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e1e8f4;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--pink);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.style-card.active .style-card-check {
+  border-color: var(--pink);
+  background: var(--pink);
+  color: #ffffff;
+}
+
+.style-card-title {
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   SERVICES CHECKBOXES
+========================================= */
+
+.services-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.service-check-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  min-height: 49px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #ffffff;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.service-check-card:hover {
+  border-color: #efadd4;
+}
+
+.service-check-card.active {
+  border-color: #f0a3d2;
+  background: var(--soft-pink);
+}
+
+.service-check-card input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.custom-checkbox {
+  display: grid;
+  place-items: center;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #ccd8ea;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.service-check-card.active .custom-checkbox {
+  border-color: var(--pink);
+  background: var(--pink);
+}
+
+.service-check-card input:focus-visible + .custom-checkbox {
+  outline: 3px solid rgba(236, 21, 149, 0.2);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   BUDGET CHOICES
+========================================= */
+
+.quote-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quote-choice {
+  min-width: 0;
+  min-height: 45px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.quote-choice:hover {
+  border-color: #f0a3d2;
+}
+
+.quote-choice.active {
+  border-color: var(--pink);
+  background: var(--soft-pink);
+  color: var(--pink-dark);
+}
+
+.quote-timeline-field {
+  margin-top: 23px;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.quote-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 55px;
+  padding: 15px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(110deg, var(--pink), #f24aa9);
+  box-shadow: 0 10px 24px rgba(236, 21, 149, 0.18);
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.quote-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(236, 21, 149, 0.25);
+}
+
+.quote-submit-btn:active {
+  transform: translateY(0);
+}
+
+.quote-submit-btn span {
+  font-size: 19px;
+}
+
+.quote-privacy-note {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   ESTIMATE SUMMARY SIDEBAR
+========================================= */
+
+.quote-summary-top .quote-eyebrow {
+  margin-bottom: 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.quote-summary-top h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 25px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.quote-summary-top > p {
+  margin: 12px 0 23px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.quote-estimate-card {
+  padding: 22px 18px;
+  border: 1px solid #e7e9fb;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(236, 21, 149, 0.1),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #f2f8ff, #fff3fa);
+}
+
+.quote-estimate-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.6;
+}
+
+.quote-estimate-value {
+  display: block;
+  color: var(--navy);
+  font-size: clamp(21px, 2vw, 28px);
+  font-weight: 850;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.quote-rate-label {
+  display: block;
+  margin-top: 8px;
+  color: var(--pink-dark);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.6;
+}
+
+.quote-estimate-card > p {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.quote-summary-details {
+  margin-top: 22px;
+}
+
+.quote-summary-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f7;
+}
+
+.quote-summary-row span {
+  flex: 1;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.quote-summary-row strong {
+  max-width: 58%;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.6;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.quote-summary-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 23px;
+  padding: 16px;
+  border: 1px solid #f5d6e9;
+  border-radius: 13px;
+  background: #fff8fc;
+}
+
+.quote-note-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 9px;
+  background: #fce5f3;
+  color: var(--pink);
+  font-size: 17px;
+}
+
+.quote-summary-note strong {
+  display: block;
+  color: var(--navy);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.quote-summary-note p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.quote-disclaimer {
+  margin: 17px 0 0;
+  color: #7d87a4;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   SUCCESS SCREEN
+========================================= */
+
+.quote-success-page {
+  --navy: #080f55;
+  --pink: #ec1595;
+  --text: #111b62;
+  --muted: #68739c;
+
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 75vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f4faff, #fff5fb);
+  color: var(--text);
+}
+
+.quote-success-card {
+  width: 100%;
+  max-width: 680px;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid #e5eaf5;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 65px rgba(8, 15, 85, 0.08);
+  text-align: center;
+}
+
+.success-icon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #e6fbf0;
+  color: #168b55;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.quote-success-card > p {
+  margin: 20px auto 25px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.success-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.success-details > div {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #e6edf7;
+  border-radius: 12px;
+  background: #fbfdff;
+}
+
+.success-details small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.success-details strong {
+  display: block;
+  color: var(--navy);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.quote-page button:focus-visible,
+.quote-success-page button:focus-visible {
+  outline: 3px solid rgba(236, 21, 149, 0.3);
+  outline-offset: 3px;
+}
+
+.quote-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .quote-page {
+    padding: 50px 20px 70px;
+  }
+
+  .quote-layout {
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+    gap: 20px;
+  }
+
+  .quote-form {
+    padding: 25px;
+  }
+
+  .quote-summary {
+    padding: 22px;
+  }
+
+  .quote-style-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quote-estimate-value {
+    font-size: 23px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET / LARGE PHONE
+========================================= */
+
+@media (max-width: 760px) {
+  .quote-page {
+    padding: 38px 16px 55px;
+  }
+
+  .quote-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .quote-section-heading h1 {
+    font-size: clamp(30px, 7vw, 43px);
+    letter-spacing: -1px;
+  }
+
+  .quote-section-heading > p {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .quote-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .quote-form {
+    padding: clamp(18px, 4vw, 28px);
+    border-radius: 18px;
+  }
+
+  .quote-summary {
+    position: static;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .quote-summary-top h2 {
+    font-size: 23px;
+  }
+
+  .quote-estimate-value {
+    font-size: clamp(22px, 5vw, 29px);
+  }
+
+  .quote-style-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .style-card {
+    min-height: 95px;
+    padding: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+  .quote-page {
+    padding: 30px 12px 40px;
+  }
+
+  .quote-section-heading {
+    margin-bottom: 24px;
+  }
+
+  .quote-section-heading .quote-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .quote-section-heading h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.2;
+  }
+
+  .quote-section-heading > p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .quote-form {
+    padding: 18px 14px;
+    border-radius: 15px;
+  }
+
+  .quote-form-section {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  .quote-form-heading {
+    gap: 11px;
+    margin-bottom: 20px;
+  }
+
+  .quote-step-number {
+    flex-basis: 37px;
+    width: 37px;
+    height: 37px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .quote-form-heading h2 {
+    font-size: 18px;
+  }
+
+  .quote-form-heading p {
+    font-size: 12px;
+  }
+
+  .quote-two-column {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .quote-field input,
+  .quote-field select {
+    min-height: 47px;
+  }
+
+  .quote-style-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .style-card {
+    min-height: 82px;
+    gap: 15px;
+    padding: 12px;
+  }
+
+  .style-card-title {
+    font-size: 12px;
+  }
+
+  .services-check-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .service-check-card {
+    min-height: 46px;
+  }
+
+  .quote-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .quote-choice {
+    min-height: 43px;
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+
+  .quote-summary {
+    padding: 19px 15px;
+  }
+
+  .quote-summary-top h2 {
+    font-size: 22px;
+  }
+
+  .quote-estimate-card {
+    padding: 18px 14px;
+  }
+
+  .quote-estimate-value {
+    font-size: clamp(20px, 6vw, 26px);
+  }
+
+  .quote-summary-row {
+    gap: 8px;
+  }
+
+  .quote-summary-row span,
+  .quote-summary-row strong {
+    font-size: 11px;
+  }
+
+  .quote-summary-note {
+    padding: 13px;
+  }
+
+  .quote-submit-btn {
+    min-height: 51px;
+    font-size: 13px;
+  }
+
+  .success-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quote-success-page {
+    padding: 30px 12px;
+  }
+
+  .quote-success-card {
+    padding: 24px 16px;
+    border-radius: 17px;
+  }
+
+  .quote-success-card h1 {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+  .quote-page {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .quote-form {
+    padding: 15px 11px;
+  }
+
+  .quote-form-heading {
+    gap: 8px;
+  }
+
+  .quote-step-number {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .quote-form-heading h2 {
+    font-size: 16px;
+  }
+
+  .quote-style-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quote-choice-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quote-summary-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .quote-summary-row strong {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-page *,
+  .quote-success-page * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

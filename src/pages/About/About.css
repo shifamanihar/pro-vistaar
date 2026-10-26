@@ -1,0 +1,349 @@
+ 
+.about-page {
+  width: 100%;
+  padding: 110px 6%;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dotted background */
+.about-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(20, 25, 55, 0.12) 0.8px,
+    transparent 0.8px
+  );
+  background-size: 8px 8px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   LEFT VIDEO
+========================================= */
+
+.about-media {
+  width: 100%;
+  height: 530px;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  position: relative;
+
+  background: #edf4fb;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(8, 23, 48, 0.04),
+    rgba(255, 255, 255, 0)
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.about-content {
+  padding-right: 15px;
+}
+
+.about-eyebrow {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #e91e63;
+
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.about-content h1 {
+  margin: 0 0 30px;
+
+  color: #0b1455;
+
+  font-size: clamp(48px, 5vw, 68px);
+  line-height: 1.05;
+
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.about-content h1 span {
+  color: #0b1455;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-description {
+  margin: 0 0 16px;
+
+  color: #5c6685;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.about-quote {
+  margin-top: 28px;
+
+  min-height: 120px;
+
+  display: flex;
+  align-items: stretch;
+
+  background: #fafafa;
+
+  position: relative;
+}
+
+.quote-line {
+  width: 5px;
+  min-width: 5px;
+
+  background: #f72570;
+}
+
+.about-quote p {
+  margin: 0;
+
+  padding: 30px 32px;
+
+  color: #526080;
+
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* =========================================
+   FOUNDER
+========================================= */
+
+.founder-section {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 35px;
+}
+
+.founder-image-wrapper {
+  width: 100px;
+  height: 100px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #eaf3ff;
+
+  border: 5px solid #edf5ff;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.founder-info h3 {
+  margin: 0 0 5px;
+
+  color: #071352;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.founder-info p {
+  margin: 0 0 7px;
+
+  color: #64708e;
+
+  font-size: 17px;
+}
+
+.since {
+  color: #e91e63;
+
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.since strong {
+  color: #071352;
+  font-size: 16px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-page {
+    padding: 80px 5%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-media {
+    height: 500px;
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  .about-content h1 {
+    font-size: 55px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-page {
+    padding: 65px 20px;
+  }
+
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-media {
+    height: 330px;
+    border-radius: 12px;
+  }
+
+  .about-eyebrow {
+    font-size: 13px;
+    margin-bottom: 17px;
+  }
+
+  .about-content h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .about-quote {
+    margin-top: 24px;
+  }
+
+  .about-quote p {
+    padding: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .founder-section {
+    margin-top: 28px;
+    gap: 15px;
+  }
+
+  .founder-image-wrapper {
+    width: 78px;
+    height: 78px;
+  }
+
+  .founder-info h3 {
+    font-size: 20px;
+  }
+
+  .founder-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-container.about-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container.about-details {
+    gap: 30px;
+    margin-top: 45px;
+  }
+
+  .about-section-title {
+    font-size: 29px;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .about-page {
+    padding-left: max(6%, calc((100vw - 1450px) / 2));
+    padding-right: max(6%, calc((100vw - 1450px) / 2));
+  }
+}

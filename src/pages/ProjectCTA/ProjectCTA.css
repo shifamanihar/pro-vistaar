@@ -1,0 +1,540 @@
+/* =====================================================
+   PROVISTAR — PROJECT CTA
+===================================================== */
+
+.project-cta-section {
+  position: relative;
+    position: relative;
+    width: 100%;
+    padding: 105px 6%;
+    overflow: hidden;
+    background: linear-gradient(
+    90deg,
+    #aaa6e8 0%,
+    #a8c9ec 48%,
+    #b5dfdf 100%
+  );
+    color: #071352;
+}
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.project-cta-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.project-cta-glow-one {
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  right: -130px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(236, 35, 133, 0.32),
+      rgba(236, 35, 133, 0)
+    );
+}
+
+.project-cta-glow-two {
+  width: 450px;
+  height: 450px;
+
+  bottom: -300px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(110, 205, 255, 0.2),
+      rgba(110, 205, 255, 0)
+    );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.project-cta-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    0.6fr;
+
+  align-items: center;
+
+  gap: 90px;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.project-cta-content {
+  max-width: 700px;
+}
+
+.project-cta-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: #ff5ba7;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.project-cta-eyebrow::before {
+  content: "";
+
+  width: 28px;
+  height: 1px;
+
+  background: #ff5ba7;
+}
+
+.project-cta-content h2 {
+  margin: 0;
+
+  color: #071352;
+
+  font-size: clamp(45px, 5vw, 68px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2.3px;
+
+  font-weight: 700;
+}
+
+.project-cta-content h2 span {
+  color: #ff5ba7;
+}
+
+.project-cta-content p {
+  max-width: 610px;
+
+  margin: 25px 0 32px;
+
+  color:  #071352;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.project-cta-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+
+/* Primary */
+
+.project-cta-button {
+  min-width: 205px;
+
+  padding: 15px 23px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ed1684,
+      #c64fd9
+    );
+
+  color: #ecedf2;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 12px 30px rgba(236, 35, 133, 0.28);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 35px rgba(236, 35, 133, 0.38);
+}
+
+.project-cta-arrow {
+  font-size: 20px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.project-cta-button:hover .project-cta-arrow {
+  transform: translateX(5px);
+}
+
+
+/* Secondary */
+
+.project-cta-secondary {
+  color: rgba(255, 255, 255, 0.78);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  border-bottom: 1px solid rgba(21, 5, 73, 0.35);
+
+  padding-bottom: 4px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-cta-secondary:hover {
+  color: #071352;
+
+  border-color: #ff5ba7;
+}
+
+
+/* =====================================================
+   EXPERIENCE CARD
+===================================================== */
+
+.project-cta-experience {
+  position: relative;
+
+  padding: 35px 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   EXPERIENCE TOP
+===================================================== */
+
+.experience-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.experience-small {
+  padding-top: 8px;
+
+  color:  #071352;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.experience-year {
+  color: #ff5ba7;
+
+  font-size: 43px;
+
+  line-height: 1;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.experience-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 28px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 91, 167, 0.5),
+      rgba(255, 255, 255, 0.05)
+    );
+}
+
+
+/* =====================================================
+   EXPERIENCE STATS
+===================================================== */
+
+.experience-bottom {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.experience-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.experience-stat strong {
+  color: #071352;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.experience-stat span {
+  color: #071352;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   TAGLINE
+===================================================== */
+
+.experience-tagline {
+  margin-top: 30px;
+
+  padding-top: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: rgba(37, 58, 119, 0.55);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.experience-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ff5ba7;
+
+  box-shadow:
+    0 0 10px rgba(255, 91, 167, 0.8);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .project-cta-section {
+    padding: 90px 5%;
+  }
+
+  .project-cta-container {
+    grid-template-columns:
+      1fr 0.7fr;
+
+    gap: 50px;
+  }
+
+  .project-cta-content h2 {
+    font-size: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .project-cta-section {
+    padding: 75px 20px;
+
+    text-align: left;
+  }
+
+  .project-cta-container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 45px;
+  }
+
+  .project-cta-content h2 {
+    font-size: 40px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .project-cta-content p {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Buttons */
+
+  .project-cta-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 17px;
+  }
+
+  .project-cta-button {
+    width: 100%;
+  }
+
+  .project-cta-secondary {
+    align-self: flex-start;
+  }
+
+
+  /* Experience */
+
+  .project-cta-experience {
+    padding: 28px 24px;
+
+    border-radius: 20px;
+  }
+
+  .experience-year {
+    font-size: 37px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .project-cta-content h2 {
+    font-size: 34px;
+  }
+
+  .project-cta-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .experience-year {
+    font-size: 32px;
+  }
+
+  .experience-stat strong {
+    font-size: 26px;
+  }
+
+}

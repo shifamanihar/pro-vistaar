@@ -1,0 +1,646 @@
+
+.pv-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(30, 35, 75, 0.1);
+  font-family: inherit;
+}
+
+.pv-header *,
+.pv-header *::before,
+.pv-header *::after {
+  box-sizing: border-box;
+}
+
+.pv-scroll-section {
+  scroll-margin-top: 210px;
+}
+
+@media (max-width: 768px) {
+  .pv-scroll-section {
+    scroll-margin-top: 100px;
+  }
+}
+ 
+/* TOP CONTACT BAR */
+.pv-topbar {
+  background: #171d36;
+  color: #fff;
+}
+
+.pv-topbar-inner {
+  max-width: 1600px;
+  min-height: 52px;
+  margin: 0 auto;
+  padding: 8px clamp(16px, 3vw, 44px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 30px);
+}
+
+.pv-top-item,
+.pv-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5f3ff;
+  text-decoration: none;
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pv-top-item svg,
+.pv-whatsapp-link svg {
+  width: 20px;
+  height: 20px;
+  color: #a8c9ec;
+  flex-shrink: 0;
+}
+
+.pv-top-item:hover,
+.pv-whatsapp-link:hover {
+  color: #ff8ac7;
+}
+
+.pv-top-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 26px);
+  margin-left: auto;
+}
+
+.pv-estimate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #5546c8, #ff5ba7);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+}
+
+.pv-estimate-button:hover {
+  transform: translateY(-2px);
+}
+
+/* MAIN BAR */
+.pv-mainbar {
+  background: linear-gradient(
+    105deg,
+    #aaa6e8 0%,
+    #a8c9ec 52%,
+    #b5dfdf 100%
+  );
+  border-bottom: 1px solid rgba(85, 70, 200, 0.15);
+}
+
+.pv-mainbar-inner {
+  max-width: 1600px;
+  min-height: 96px;
+  margin: 0 auto;
+  padding: 12px clamp(16px, 3vw, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 1.8vw, 28px);
+}
+
+/* LOGO */
+.pv-brand {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #101943;
+  cursor: pointer;
+}
+
+.pv-brand-main {
+  font-size: clamp(27px, 2.4vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.pv-brand-pro {
+  color: #5546c8;
+}
+
+.pv-brand-subtitle {
+  margin-top: 6px;
+  padding-left: 2px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #30345d;
+}
+
+/* DESKTOP NAV */
+.pv-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(13px, 1.7vw, 27px);
+}
+
+.pv-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 0;
+  color: #111a43;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.pv-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 4px;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #5546c8, #ff5ba7);
+  transition: right 0.25s ease;
+}
+
+.pv-nav-link:hover,
+.pv-nav-link.pv-active {
+  color: #5546c8;
+}
+
+.pv-nav-link:hover::after,
+.pv-nav-link.pv-active::after {
+  right: 0;
+}
+
+.pv-plus {
+  color: #5546c8;
+  font-size: 18px;
+}
+
+/* DROPDOWN */
+.pv-dropdown {
+  position: relative;
+}
+
+.pv-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: -12px;
+  z-index: 1100;
+  min-width: 235px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: #fff;
+  border: 1px solid #e7e5f6;
+  border-radius: 12px;
+  box-shadow: 0 15px 38px rgba(22, 25, 65, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.pv-dropdown:hover .pv-dropdown-menu,
+.pv-dropdown:focus-within .pv-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.pv-dropdown-menu a,
+.pv-dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #242744;
+  text-align: left;
+  text-decoration: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pv-dropdown-menu a:hover,
+.pv-dropdown-menu button:hover {
+  background: #f2f0ff;
+  color: #5546c8;
+}
+
+/* ACTION BUTTONS */
+.pv-main-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.pv-call-button {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #ff5ba7, #e52d93);
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(229, 45, 147, 0.2);
+}
+
+.pv-call-button svg {
+  width: 23px;
+  height: 23px;
+}
+
+.pv-quote-button {
+  min-height: 48px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  color: #fff;
+  background: linear-gradient(110deg, #5546c8, #399de8);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px rgba(85, 70, 200, 0.17);
+}
+
+.pv-call-button,
+.pv-quote-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pv-call-button:hover,
+.pv-quote-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(85, 70, 200, 0.24);
+}
+
+.pv-mobile-toggle,
+.pv-mobile-whatsapp {
+  display: none;
+}
+
+/* LAPTOPS AND TABLETS */
+@media (max-width: 1200px) {
+  .pv-mainbar-inner {
+    gap: 14px;
+  }
+
+  .pv-navigation {
+    gap: 12px;
+  }
+
+  .pv-nav-link {
+    font-size: 13px;
+  }
+
+  .pv-brand-main {
+    font-size: 29px;
+  }
+
+  .pv-main-actions {
+    gap: 8px;
+  }
+
+  .pv-call-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pv-quote-button {
+    min-height: 42px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
+
+/* TABLET AND MOBILE MENU */
+@media (max-width: 950px) {
+  .pv-topbar-inner {
+    min-height: 46px;
+    padding: 7px 18px;
+    gap: 12px;
+  }
+
+  .pv-top-item,
+  .pv-whatsapp-link {
+    font-size: 12px;
+  }
+
+  .pv-top-item svg,
+  .pv-whatsapp-link svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .pv-email {
+    display: none;
+  }
+
+  .pv-estimate-button {
+    min-height: 35px;
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .pv-mainbar-inner {
+    position: relative;
+    min-height: 78px;
+    padding: 12px 18px;
+    gap: 10px;
+  }
+
+  .pv-brand-main {
+    font-size: 28px;
+  }
+
+  .pv-brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .pv-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    max-height: calc(100dvh - 120px);
+    overflow-y: auto;
+    padding: 12px 22px 22px;
+    background: #fff;
+    border-top: 1px solid #e9e6ff;
+    box-shadow: 0 18px 28px rgba(22, 25, 65, 0.14);
+  }
+
+  .pv-navigation.pv-navigation-open {
+    display: flex;
+  }
+
+  .pv-nav-link {
+    width: 100%;
+    min-height: 48px;
+    justify-content: flex-start;
+    padding: 13px 5px;
+    font-size: 15px;
+    border-bottom: 1px solid #f0eff8;
+  }
+
+  .pv-nav-link::after {
+    display: none;
+  }
+
+  .pv-dropdown {
+    width: 100%;
+  }
+
+  .pv-dropdown-menu {
+    position: static;
+    display: none;
+    min-width: 0;
+    padding: 5px 8px 10px;
+    background: #f7f6ff;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .pv-dropdown:hover .pv-dropdown-menu,
+  .pv-dropdown:focus-within .pv-dropdown-menu {
+    display: flex;
+  }
+
+  .pv-dropdown-menu a,
+  .pv-dropdown-menu button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .pv-main-actions {
+    margin-left: auto;
+  }
+
+  .pv-call-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pv-quote-button {
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .pv-mobile-toggle {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(85, 70, 200, 0.22);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #171d36;
+    cursor: pointer;
+  }
+
+  .pv-mobile-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pv-mobile-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 9px;
+    color: #fff;
+    background: linear-gradient(110deg, #5546c8, #ff5ba7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+  }
+}
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 520px) {
+  .pv-topbar-inner {
+    padding: 7px 10px;
+    gap: 8px;
+  }
+
+  .pv-location {
+    min-width: 0;
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .pv-location svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pv-top-actions {
+    gap: 8px;
+  }
+
+  .pv-whatsapp-link {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .pv-whatsapp-link svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pv-estimate-button {
+    min-height: 30px;
+    padding: 7px;
+    font-size: 9px;
+  }
+
+  .pv-estimate-button svg {
+    display: none;
+  }
+
+  .pv-mainbar-inner {
+    padding: 10px;
+    gap: 7px;
+  }
+
+  .pv-brand-main {
+    font-size: clamp(21px, 6vw, 26px);
+    letter-spacing: -1px;
+  }
+
+  .pv-brand-subtitle {
+    margin-top: 4px;
+    font-size: 7px;
+    letter-spacing: 1.8px;
+  }
+
+  .pv-main-actions {
+    gap: 6px;
+  }
+
+  .pv-call-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .pv-call-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pv-quote-button {
+    min-height: 35px;
+    padding: 0 8px;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .pv-quote-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pv-mobile-toggle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .pv-mobile-toggle svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .pv-navigation {
+    padding: 10px 16px 20px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 360px) {
+  .pv-location span {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pv-brand-main {
+    font-size: 20px;
+  }
+
+  .pv-call-button {
+    display: none;
+  }
+
+  .pv-quote-button {
+    font-size: 10px;
+    padding: 0 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-header *,
+  .pv-header *::before,
+  .pv-header *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

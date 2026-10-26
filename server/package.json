@@ -1,0 +1,20 @@
+{
+  "name": "provistaar-reviews-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "googleapis": "^144.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^10.1.1",
+    "resend": "^6.33.0"
+  }
+}

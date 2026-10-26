@@ -1,0 +1,63 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #ebe8e7;
+  color: #29262a;
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 700px;
+}
+
+.not-found-number {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(7rem, 18vw, 13rem);
+  line-height: 0.8;
+  font-weight: 500;
+  opacity: 0.12;
+}
+
+.not-found-label {
+  margin-top: -20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.not-found h1 {
+  margin: 20px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.not-found-description {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  font-family: "Manrope", sans-serif;
+  color: #706b6d;
+}
+
+.not-found-button {
+  display: inline-flex;
+  padding: 14px 28px;
+  border-radius: 50px;
+  background: #ea7186;
+  color: white;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.not-found-button:hover {
+  transform: translateY(-3px);
+}

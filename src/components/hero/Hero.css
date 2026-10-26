@@ -1,0 +1,826 @@
+
+/* =========================================================
+   PRO VISTAAR — HERO SECTION
+   Complete responsive CSS
+   Devices: Desktop, Laptop, Tablet and Mobile
+========================================================= */
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: max(650px, calc(100vh - 105px));
+  min-height: max(650px, calc(100svh - 105px));
+
+  overflow: hidden;
+  background: #101116;
+}
+
+/* ---------- BACKGROUND VIDEO ---------- */
+
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.hero-video-wrapper.hero-video-changing {
+  opacity: 0.3;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- DARK OVERLAY ---------- */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background: linear-gradient(
+    90deg,
+    rgba(8, 10, 16, 0.82) 0%,
+    rgba(8, 10, 16, 0.62) 38%,
+    rgba(8, 10, 16, 0.28) 70%,
+    rgba(8, 10, 16, 0.35) 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ---------- BOTTOM GRADIENT ---------- */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+
+  height: 180px;
+
+  background: linear-gradient(
+    to top,
+    rgba(8, 10, 16, 0.65),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: inherit;
+
+  margin: 0 auto;
+  padding: 65px 70px 125px;
+
+  box-sizing: border-box;
+}
+
+/* ---------- HERO CONTENT ---------- */
+
+.hero-content {
+  width: 100%;
+  max-width: 720px;
+  min-width: 0;
+
+  margin: 0 auto 0 0;
+  padding-top: 0;
+
+  text-align: left;
+}
+
+/* ---------- EYEBROW ---------- */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  margin: 0 0 28px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow-line {
+  display: block;
+  flex: 0 0 44px;
+
+  width: 44px;
+  height: 1px;
+
+  background: #ff8a91;
+}
+
+/* ---------- HEADING ---------- */
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+
+  color: #fff;
+
+  font-size: clamp(56px, 6.3vw, 92px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -3px;
+  overflow-wrap: normal;
+}
+
+.hero-title > span {
+  display: block;
+  max-width: 100%;
+}
+
+.hero-title-highlight {
+  margin-top: 10px;
+
+  color: #fff;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ---------- DESCRIPTION ---------- */
+
+.hero-description {
+  max-width: 590px;
+
+  margin: 34px 0 0;
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+
+  overflow-wrap: anywhere;
+}
+
+/* ---------- CTA ALIGNMENT ---------- */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 38px 0 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* ---------- EXPLORE PROJECTS BUTTON ---------- */
+
+.hero-button {
+  position: relative;
+  isolation: isolate;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  flex: 0 0 auto;
+
+  width: 256px;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 64px;
+
+  margin: 0;
+  padding: 17px 24px 17px 28px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    105deg,
+    #ffb77f 0%,
+    #ff8a91 45%,
+    #ff3f96 100%
+  );
+
+  color: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-shadow: 0 15px 35px rgba(255, 63, 150, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Button shine animation */
+
+.hero-button::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: -65px;
+  z-index: -1;
+
+  width: 85px;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  transform: skewX(-25deg);
+  transition: right 0.45s ease;
+
+  pointer-events: none;
+}
+
+/* Button label */
+
+.hero-button > span:first-child {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  flex: 0 1 auto;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Button arrow */
+
+.hero-button .hero-button-arrow {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: 26px;
+  height: 26px;
+
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(255, 63, 150, 0.32);
+}
+
+.hero-button:hover::before {
+  right: 120%;
+}
+
+.hero-button:hover .hero-button-arrow {
+  transform: translateX(4px);
+}
+
+.hero-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ---------- VIDEO INDICATORS ---------- */
+
+.hero-video-indicators {
+  position: absolute;
+  left: 70px;
+  bottom: 88px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 3;
+}
+
+.hero-indicator {
+  position: relative;
+
+  display: block;
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 4px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hero-indicator span {
+  position: absolute;
+  inset: 0 auto 0 0;
+
+  display: block;
+  width: 0;
+  height: 100%;
+
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.hero-indicator.active {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-indicator.active span {
+  width: 100%;
+}
+
+.hero-indicator:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ---------- SCROLL INDICATOR ---------- */
+
+.hero-scroll {
+  position: absolute;
+  left: 70px;
+  bottom: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.hero-scroll-line {
+  flex: 0 0 55px;
+
+  width: 55px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================================================
+   LARGE LAPTOPS AND DESKTOPS
+========================================================= */
+
+@media (min-width: 1441px) {
+  .hero-container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .hero-video-indicators,
+  .hero-scroll {
+    left: max(80px, calc((100vw - 1440px) / 2 + 80px));
+  }
+}
+
+/* =========================================================
+   STANDARD LAPTOPS
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    min-height: max(600px, calc(100vh - 95px));
+    min-height: max(600px, calc(100svh - 95px));
+  }
+
+  .hero-container {
+    padding: 60px 45px 120px;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero-title {
+    font-size: clamp(54px, 6.5vw, 76px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero-description {
+    max-width: 540px;
+    font-size: 18px;
+  }
+
+  .hero-actions {
+    margin-top: 30px;
+  }
+
+  .hero-button {
+    width: 240px;
+    min-height: 60px;
+    font-size: 16px;
+  }
+
+  .hero-video-indicators {
+    left: 45px;
+    bottom: 83px;
+  }
+
+  .hero-scroll {
+    left: 45px;
+    bottom: 38px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    min-height: max(600px, calc(100svh - 78px));
+  }
+
+  .hero-container {
+    min-height: inherit;
+    align-items: center;
+
+    padding: 65px 32px 125px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 590px;
+  }
+
+  .hero-eyebrow {
+    gap: 12px;
+    margin-bottom: 23px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero-eyebrow-line {
+    flex-basis: 32px;
+    width: 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 8vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  .hero-title-highlight {
+    margin-top: 6px;
+  }
+
+  .hero-description {
+    max-width: 510px;
+    margin-top: 26px;
+
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    margin-top: 28px;
+  }
+
+  .hero-button {
+    width: 225px;
+    min-height: 58px;
+    padding: 15px 20px 15px 24px;
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .hero-button .hero-button-arrow {
+    font-size: 25px;
+  }
+
+  .hero-video-indicators {
+    left: 32px;
+    bottom: 80px;
+    gap: 8px;
+  }
+
+  .hero-indicator {
+    flex-basis: 32px;
+    width: 32px;
+  }
+
+  .hero-scroll {
+    left: 32px;
+    bottom: 38px;
+  }
+}
+
+/* =========================================================
+   MOBILE PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: max(570px, calc(100svh - 75px));
+  }
+
+  .hero-container {
+    min-height: inherit;
+    align-items: center;
+
+    padding: 50px 20px 120px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-eyebrow {
+    gap: 10px;
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    letter-spacing: 1.6px;
+  }
+
+  .hero-eyebrow-line {
+    flex-basis: 26px;
+    width: 26px;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 10.8vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -1.6px;
+  }
+
+  .hero-title-highlight {
+    margin-top: 6px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin-top: 23px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .hero-button {
+    width: 220px;
+    max-width: 100%;
+    min-height: 56px;
+
+    padding: 14px 18px 14px 22px;
+    gap: 10px;
+
+    font-size: 15px;
+  }
+
+  .hero-button > span:first-child {
+    font-size: 15px;
+  }
+
+  .hero-button .hero-button-arrow {
+    width: 23px;
+    height: 23px;
+    font-size: 24px;
+  }
+
+  .hero-video-indicators {
+    left: 20px;
+    bottom: 65px;
+    gap: 7px;
+  }
+
+  .hero-indicator {
+    flex-basis: 29px;
+    width: 29px;
+    height: 3px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 10, 16, 0.8) 0%,
+      rgba(8, 10, 16, 0.56) 65%,
+      rgba(8, 10, 16, 0.4) 100%
+    );
+  }
+}
+
+/* =========================================================
+   EXTRA-SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .hero-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 112px;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 10.5vw, 40px);
+    letter-spacing: -1.2px;
+  }
+
+  .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    gap: 8px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+  }
+
+  .hero-button {
+    width: fit-content;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 52px;
+
+    padding: 13px 16px;
+    gap: 10px;
+
+    font-size: 14px;
+  }
+
+  .hero-button > span:first-child {
+    font-size: 14px;
+  }
+
+  .hero-button .hero-button-arrow {
+    width: 21px;
+    height: 21px;
+    font-size: 22px;
+  }
+
+  .hero-video-indicators {
+    left: 16px;
+    bottom: 62px;
+    gap: 6px;
+  }
+
+  .hero-indicator {
+    flex-basis: 26px;
+    width: 26px;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE PHONES
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-container {
+    min-height: 520px;
+    padding-top: 45px;
+    padding-bottom: 105px;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 6vw, 58px);
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    margin-top: 18px;
+  }
+
+  .hero-button {
+    min-height: 50px;
+  }
+
+  .hero-video-indicators {
+    bottom: 62px;
+  }
+
+  .hero-scroll {
+    bottom: 28px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-wrapper,
+  .hero-button,
+  .hero-button::before,
+  .hero-button .hero-button-arrow,
+  .hero-indicator span {
+    transition: none !important;
+  }
+}
+ 
