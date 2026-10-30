@@ -13,9 +13,7 @@ import {
 } from "lucide-react";
 import "./Contact.css";
 
-const API_BASE = (
-  import.meta.env.VITE_API_URL || "http://localhost:5000"
-).replace(/\/$/, "");
+const API_BASE = "https://pro-vistaar-backend.onrender.com";
 
 const CONTACT = {
   phone: "+91 86573 78088",

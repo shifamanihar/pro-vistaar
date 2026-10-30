@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./Admin.css";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = "https://pro-vistaar-backend.onrender.com";
 const EMPTY = { name:"", email:"", phone:"", projectType:"Residential Interior", budget:"", message:"", leadStatus:"New", connected:"No", progress:"Not Started", nextFollowUp:"", notes:"", title:"", customerName:"", status:"Not Started", progressPercent:0, startDate:"", deadline:"", estimatedValue:"", amountPaid:"", amount:"", paymentDate:new Date().toISOString().slice(0,10), method:"Bank transfer", projectTitle:"", reference:"" };
 const dataOf = r => r?.data || {};
 const money = n => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(Number(n)||0);
