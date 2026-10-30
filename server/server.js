@@ -7,6 +7,7 @@ import { Resend } from "resend";
 import jwt from "jsonwebtoken";
 import adminDataRouter from "./adminDataRouter.js";
 
+
 dotenv.config();
 
 const app = express();
@@ -20,15 +21,21 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json({ limit: "20kb" }));
 
 // CORS must run before API routes
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "https://pro-vistaar.vercel.app",
+  ...(process.env.FRONTEND_ORIGIN || "")
+    .split(",")
+    .map(origin => origin.trim())
+    .filter(Boolean)
+];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173"
-  ],
+  origin: allowedOrigins,
   methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
-
 // Mount the admin router AFTER CORS
 app.use("/api/admin", adminDataRouter);
 
@@ -453,6 +460,6 @@ app.get("/api/health", (req, res) => {
 // START SERVER
 // =====================================
 
-app.listen(PORT, () => {
-  console.log(`PRO Vistaar backend running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`PRO Vistaar backend running on port ${PORT}`);
 });
