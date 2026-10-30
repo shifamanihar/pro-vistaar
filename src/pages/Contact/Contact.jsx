@@ -20,7 +20,7 @@ const API_BASE = (
 const CONTACT = {
   phone: "+91 86573 78088",
   phoneLink: "+918657378088",
-  email: "helloprovistaar@gmail.com",
+  email: "provistaars@gmail.com",
   address:
     "Shop No. 2/2, Old Wood Market, J.M.M. Road, Asalpha, Ghatkopar West, Mumbai, Maharashtra 400084",
   mapUrl:

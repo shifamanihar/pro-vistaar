@@ -14,7 +14,7 @@ import "./Navbar.css";
 
 const PHONE = "918657378088";
 const DISPLAY_PHONE = "+91 86573 78088";
-const EMAIL = "helloprovistaar@gmail.com";
+const EMAIL = "provistaars@gmail.com";
 
 const MAP_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Pro+Nirmaan+Solutions,+Shop+no+2,+Old+wood+Market,+J.M.M+Rd,+Asalpha,+Ghatkopar+West,+Mumbai,+Maharashtra+400084";

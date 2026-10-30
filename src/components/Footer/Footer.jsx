@@ -40,7 +40,7 @@ const footerData = {
       "Shop No. 2/2, Old Wood Market, J.M.M. Road, Asalpha, Ghatkopar West, Mumbai, Maharashtra 400084",
     phone: "+91 86573 78088",
     phoneLink: "+918657378088",
-    email: "helloprovistaar@gmail.com",
+    email: "provistaars@gmail.com",
     whatsapp:
       "https://wa.me/918657378088?text=Hello%20PRO%20Vistaar%2C%20I%20would%20like%20to%20enquire%20about%20your%20interior%20design%20services.%20Please%20share%20the%20details%20and%20estimated%20cost.%20Thank%20you!",
     map: "https://www.google.com/maps/dir/?api=1&destination=Shop%20No.%202%2F2%2C%20Old%20Wood%20Market%2C%20J.M.M.%20Road%2C%20Asalpha%2C%20Ghatkopar%20West%2C%20Mumbai%20400084",
