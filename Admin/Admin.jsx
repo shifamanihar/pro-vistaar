@@ -15,7 +15,7 @@ async function request(path, token, options={}) {
 
 export default function Admin() {
   const [token,setToken] = useState(()=>sessionStorage.getItem("pv_admin_token")||"");
-  const [email,setEmail] = useState("helloprovistaar@gmail.com");
+  const [email, setEmail] = useState("provistaars@gmail.com");
   const [password,setPassword] = useState("");
   const [emails,setEmails] = useState([]);
   const [records,setRecords] = useState([]);
